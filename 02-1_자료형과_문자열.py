@@ -6,7 +6,7 @@ print("Hello Python!")
 print('Hello Python!')
 print(type("hello"))
 
-print("Hi", "python") # ','는 한칸 띄움
+print("Hi", "python")  # ','는 한칸 띄움
 print("Hi", 'python', 10, 3.25, True, False) 
 
 print("say 'Hi'")

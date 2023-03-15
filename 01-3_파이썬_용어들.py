@@ -1,10 +1,11 @@
 # 01-3 파이썬 용어들
 ## 표현식, 키워드, 식별자, 주석, print()
 
+# PEP 8 – Style Guide for Python Code 참고(https://peps.python.org/pep-0008/)
 
 # 문장(statement): 실행할 수 있는 코드의 최소 단위를 문장(statement)라고 한다.
-a = 10 + 20 # 문장
-print("Python") # 문장
+a = 10 + 20  # 문장
+print("Python")  # 문장
 
 
 # 표현식(expression): 어떠한 값을 만들어 내는 간단한 코드를 표현식(expression)이라고 한다. 숫자, 수식, 문자열등
@@ -47,9 +48,15 @@ print(keyword.kwlist)
 # snake_case: 변수(item_list), 함수(print())에 사용, 함수는 snake_case이고 뒤에 괄호가 있다.
 
 
-# 주석(comment): 주석으로 처리하고자 하는 부분 앞에 # 기호를 붙인다. #기호와 문장은 1칸 뛰운다.
-print(10+20) # 이것이 주석이다.
-# 이것도 주석이다. 
+# 주석(comment)
+# 주석으로 처리하고자 하는 부분 앞에 # 기호를 붙인다. 
+# #기호와 문장은 1칸 뛰운다.
+# 주석은 블럭 주석(Block Comments)과 인라인 주석(Inline Comments)이 있다.
+# 인라인 주석은 문에서 2개 이상의 공백으로 구분해야 한다.
+
+# 이것은 블럭 주석이다. 
+print(10+20)  # 이것은 인라인 주석이다. 문장과 2개 이상의 공백으로 구분해야 한다.
+
 
 # 연산자와 자료
 ## 연산자:  +, -, *, / 등
@@ -57,9 +64,27 @@ print(10+20) # 이것이 주석이다.
 
 
 # 출력: print()
-print() # 줄바꿈
-print("100") # 1개의 값을 출력
-print(10, 255) # 여러개의 값을 출력
-print(10, 255, "Hello", True) # 여러개의 값을 출력
+print()  # 줄바꿈
+print("100")  # 1개의 값을 출력
+print(10, 255)  # 여러개의 값을 출력
+print(10, 255, "Hello", True)  # 여러개의 값을 출력
 # 문자열 보간(interpolation) 사용
 print('The value of pi is approximately %5.3f.' % 3.14159)
+
+
+# 문자열에서 줄이 너무 길어질 경우 줄 바꿈 방법: \
+print("파이썬은 모든줄을 79자로 제한한다. \
+      dockstrings and comments는 72자로 제한한다. \
+      줄바꿈은 '\'문자를 사용한다.")
+
+# if 문에서 조건이 너무 길어질 경우 줄 바꿈 방법: 괄호 사용
+number = 100
+# 더 이상 조건을 추가하지 않을 경우
+if (number==0 or 
+    2<=number<4):
+    pass
+
+# 나중에 조건을 추가할 가능성이 있는 경우
+if (number==0 
+    or 2<=number<4):
+    pass
